@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         lista.add(new DataProvider("Rock","Life can't get much better",Color.MAGENTA));
         lista.add(new DataProvider("Rock alternativo","Streseed out", Color.RED));
+        lista.add(new DataProvider("Raegaeton","Criminal", Color.BLUE));
         adapter=new Adapter(lista);
 
         layoutManager = new LinearLayoutManager(this);
