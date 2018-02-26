@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         lista.add(new DataProvider("Rock","Life can't get much better"));
         lista.add(new DataProvider("Rock alternativo","Streseed out"));
-        adapter=new Adapter(lista,this);
+        adapter=new Adapter(lista);
 
         layoutManager = new LinearLayoutManager(this);
 

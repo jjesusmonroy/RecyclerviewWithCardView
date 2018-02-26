@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import static com.example.jjesusmonroy.cardviewunidad1.R.drawable.ic_launcher_background;
+
 /**
  * Created by jjesusmonroy on 25/02/18.
  */
@@ -17,19 +19,15 @@ import java.util.List;
 public class Adapter extends RecyclerView.Adapter<Adapter.RecyclerViewHolder> {
 
     private List<DataProvider> list;
-    private Context mCtx;
 
-    public Adapter(List<DataProvider> list, Context mCtx) {
+    public Adapter(List<DataProvider> list) {
         this.list = list;
-        this.mCtx = mCtx;
     }
 
     @Override
     public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.item_layout,null);
-        RecyclerViewHolder holder = new RecyclerViewHolder(view);
-        return holder;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout,parent,false);
+        return new RecyclerViewHolder(view);
     }
 
     @Override
@@ -38,7 +36,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.RecyclerViewHolder> {
 
         holder.genero.setText(musica.getGenero());
         holder.titulo.setText(musica.getTitulo());
-        holder.imagen.setImageDrawable(mCtx.getResources().getDrawable(R.drawable.ic_launcher_background));
+        holder.imagen.setImageResource(R.drawable.ic_launcher_background);
     }
 
     @Override
