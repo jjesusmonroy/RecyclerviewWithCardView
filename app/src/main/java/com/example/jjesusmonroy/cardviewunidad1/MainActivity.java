@@ -1,5 +1,6 @@
 package com.example.jjesusmonroy.cardviewunidad1;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -22,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView=findViewById(R.id.recycler);
         lista = new ArrayList<>();
 
-        lista.add(new DataProvider("Rock","Life can't get much better"));
-        lista.add(new DataProvider("Rock alternativo","Streseed out"));
+        lista.add(new DataProvider("Rock","Life can't get much better",Color.MAGENTA));
+        lista.add(new DataProvider("Rock alternativo","Streseed out", Color.RED));
         adapter=new Adapter(lista);
 
         layoutManager = new LinearLayoutManager(this);

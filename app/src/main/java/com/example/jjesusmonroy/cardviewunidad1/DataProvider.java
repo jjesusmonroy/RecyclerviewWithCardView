@@ -7,10 +7,12 @@ package com.example.jjesusmonroy.cardviewunidad1;
 public class DataProvider {
 
     private String genero,titulo;
+    int color;
 
-    public DataProvider(String genero, String titulo) {
+    public DataProvider(String genero, String titulo, int color) {
         this.genero = genero;
         this.titulo = titulo;
+        this.color = color;
     }
 
     public String getGenero() {
@@ -19,5 +21,9 @@ public class DataProvider {
 
     public String getTitulo() {
         return titulo;
+    }
+
+    public int getColor() {
+        return color;
     }
 }
